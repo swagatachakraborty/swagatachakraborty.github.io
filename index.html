@@ -1,0 +1,95 @@
+<html>
+
+<head>
+	<link rel="icon" href="/images/paintIcon.png">
+	<link rel="stylesheet" type="text/css" href="/style.css">
+	<script src="/main.js"> </script>
+</head>
+
+	<body>
+		<div class="main">
+			<section class="color">
+				<h2><pre>Pick Color</pre></h2>
+				<table style="border:1px solid black; width:3cm">
+					<tbody id="palate" onclick="getColor(event.target.id)">
+						<tr>
+							<td id="black"></td>
+							<td id="white"></td>
+						</tr>
+						<tr>
+							<td id="green"></td>
+							<td id="darkslategray"></td>
+						</tr>
+						<tr>
+							<td id="blue"></td>
+							<td id="indigo"></td>
+						</tr>
+						<tr> 
+							<td id="gold"></td>
+							<td id="yellow"></td>
+						</tr>
+						<tr>
+							<td id="gray"></td>
+							<td id="pink"></td>
+						</tr>
+						<tr>
+							<td id="red"></td>
+							<td id="maroon"></td> 
+						</tr>
+						<tr>
+							<td id="cyan"></td>
+							<td id="skyblue"></td>
+						</tr>
+						<tr>
+							<td id="orange"></td>
+							<td id="bisque"></td>
+						</tr>
+						<tr>
+							<td id="midnightblue"></td>
+							<td id="plum"></td>
+						</tr>
+						<tr>
+							<td id="cadetblue"></td>
+							<td id="hotpink"></td>
+						</tr>
+						<tr>
+							<td id="mediumpurple"></td>
+							<td id="tomato"></td>
+						</tr>
+						<tr>
+							<td id="burlywood"></td>
+							<td id="palegreen"></td>
+						</tr>
+
+					</tbody>
+				</table>
+			</section>
+			
+			<section class="middle">
+				<section class="color-window">
+					<form>
+						Manage your color
+						<br><br>
+						<input name="color-window" type="color" value="#ffffff"/>
+					</form>
+				</section>
+
+				<section class="current-color">
+					Selected color
+					<br><br>
+					<section id="current-color"></section>
+				</section>
+				
+				<section class="random-color">
+					Pick random color
+					<br><br>
+					<button id="button" onclick="chooseRandomColor()">
+						<pre><h2>   Click   </h2></pre>
+					</button>
+				</section>
+			</section>
+
+			<section class="board_container" id="board_container" > </section>
+		</div>
+	</body>
+</html>

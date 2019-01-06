@@ -1,0 +1,162 @@
+.main {
+	font-family: sans-serif;
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+.color {
+	width: 15%;
+}
+
+.color tr {
+	height: 50px;
+	border: 1px solid black
+}
+
+.middle {
+	text-align: center;
+	width: 15%;
+	font-size: 25;
+	height: inherit;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+}
+
+.color-window {
+	text-align: center;
+	width: 100%;
+}
+
+#current-color {
+	width: 100px;
+	height: 100px;
+	border-radius: 50%; 
+	border: 3px solid black;
+	margin-left: 52px;
+}
+
+.board_container {
+	width: 70%;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+.board_container table {
+	border-collapse: collapse;
+	margin-left: 5cm;
+	padding: 0px;
+}
+
+.canvas {
+	border: 1px solid black;
+}
+
+.canvas td {
+	padding: 0px;
+	margin: 0px;
+	width: 5px;
+	height: 5px;
+}
+
+#button {
+	padding: 11px;
+}
+
+#white {
+	background-color: white;
+}
+
+#black {
+	background-color: black;
+}
+
+#blue {
+	background-color: blue;
+}
+
+#green {
+	background-color: green;
+}
+
+#red {
+	background-color: red;
+}
+
+#yellow {
+	background-color: yellow;
+}
+
+#orange {
+	background-color: orange;
+}
+
+#gray {
+	background-color: gray;
+}
+
+#skyblue {
+	background-color: skyblue;
+}
+
+#pink {
+	background-color: pink;
+}
+
+#indigo {
+	background-color: indigo;
+}
+
+#maroon {
+	background-color: maroon;
+}
+
+#cyan {
+	background-color: cyan;
+}
+
+#plum {
+	background-color: plum;
+}
+ 
+#bisque {
+	background-color: bisque;
+}
+
+#darkslategray {
+	background-color: darkslategray;
+}
+
+#midnightblue {
+	background-color: midnightblue;
+}
+
+#gold {
+	background-color: gold
+}
+
+#cadetblue {
+	background-color: cadetblue
+}
+
+#hotpink{
+	background-color:hotpink;
+}
+
+#mediumpurple {
+	background-color: mediumpurple;
+}
+
+#tomato {
+	background-color: tomato;
+}
+
+#burlywood {
+	background-color: burlywood;
+}
+
+#palegreen {
+	background-color: palegreen
+}
