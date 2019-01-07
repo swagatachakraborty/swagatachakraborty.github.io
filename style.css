@@ -28,7 +28,7 @@
 .tool {
 	width: 100%;
 	display: flex;
-	justify-content: space-between;
+	justify-content: space-around;
 }
 
 .color-window {
