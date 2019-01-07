@@ -50,10 +50,6 @@ window.onload = function () {
 	document.getElementById('board_container').innerHTML += createBoard();
 };
 
-const getColor = function (selectedColor) {
-	updateCurrentColor(selectedColor);
-};
-
 const sratrOrStopDrawing = function () {
 	drawing = !drawing;
 };
@@ -62,4 +58,9 @@ const draw = function (pixel) {
 	if(pixel.id != "" && drawing){
 		changeBackgroundColor(pixel.id, color);
 	}
+};
+
+const updateColorByValue = function (id) {
+	let selectedColor = document.getElementById(id).value;
+	updateCurrentColor(selectedColor);
 };

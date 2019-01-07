@@ -11,7 +11,7 @@
 			<section class="color">
 				<h2><pre>Pick Color</pre></h2>
 				<table style="border:1px solid black; width:3cm">
-					<tbody id="palate" onclick="getColor(event.target.id)">
+					<tbody id="palate" onclick="updateCurrentColor(event.target.id)">
 						<tr>
 							<td id="black"></td>
 							<td id="white"></td>
@@ -67,11 +67,10 @@
 			
 			<section class="middle">
 				<section class="color-window">
-					<form>
-						Manage your color
-						<br><br>
-						<input name="color-window" type="color" value="#ffffff"/>
-					</form>
+					Manage your color
+					<br><br>
+					<input id="color-window" type="color" value="#ffffff" />
+					<input type="submit" onclick="updateColorByValue('color-window')"/>
 				</section>
 
 				<section class="current-color">
