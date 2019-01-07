@@ -1,6 +1,8 @@
 let random_color_clicked = true;
 let color;
 let drawing = false;
+let brush = false;
+let pencil = true;
 
 const random = (range) => Math.floor(Math.random() * range);
 
@@ -28,17 +30,17 @@ const chooseRandomColor = function () {
 };
 
 const createBoard = function () {
-	let max = 140;
+	let max = 142;
 	let table = `<table
 	class=canvas
 	onclick='sratrOrStopDrawing()'
 	onmousemove='draw(event.target)'>
 	<tbody>`;
-	let id = 0;
 	for(let x = 0; x < max; x++){
 		table += '<tr>';
 		for(let y = 0; y < max; y++){
-			table += '<td id='+ (id++) +	'></td>';
+			let id = x + ',' + y;
+			table += '<td id=' + id +	'></td>';
 		}
 		table += '</tr>';
 	}

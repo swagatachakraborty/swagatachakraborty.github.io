@@ -25,6 +25,12 @@
 	justify-content: space-around;
 }
 
+.tool {
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+}
+
 .color-window {
 	text-align: center;
 	width: 100%;
