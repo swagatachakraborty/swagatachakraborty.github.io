@@ -1,7 +1,6 @@
-let random_color_clicked = true;
 let drawing = false;
+let tools = [ 'brush', 'pencil', 'eraser', 'rainbow' ];
 let color, activeTool;
-let tools = [ 'brush', 'pencil', 'eraser' ];
 
 const random = (range) => Math.floor(Math.random() * range);
 
@@ -20,11 +19,9 @@ const changeBackgroundColor = function (id, color) {
 };
 
 const chooseRandomColor = function () {
-	random_color_clicked = !random_color_clicked;
 	let interval = setInterval(function () {
-		color = randomColor();
-		updateCurrentColor(color);
-		if(random_color_clicked) {
+		updateCurrentColor( randomColor() );
+		if(activeTool != 'rainbow') {
 			clearInterval(interval);
 		}
 	}, 100);
@@ -62,11 +59,8 @@ const updateColorByValue = function (id) {
 
 const startTool = function (pixel) {
 	startOrStopDrawing();
-	switch(activeTool) {
-		case 'pencil': break;
-		case 'brush': fill(pixel); break;
-		case 'eraser': updateCurrentColor('');
-	}
+	if(activeTool == 'brush')	
+		fill(pixel);
 };
 
 const fill = function (pixel) {
@@ -75,7 +69,7 @@ const fill = function (pixel) {
 	drawing = false;
 };
 
-const startOrStopDrawing = function (pixel) {
+const startOrStopDrawing = function () {
 	drawing = !drawing;
 };
 

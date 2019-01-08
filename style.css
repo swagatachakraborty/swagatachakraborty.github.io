@@ -25,16 +25,22 @@
 	justify-content: space-around;
 }
 
+.descriptions {
+	border-bottom: 1px solid darkmagenta;
+}
+
 .tool-bar {
 	width: 100%;
+	/* background-color: aqua; */
 	display: flex;
 	flex-direction: column;
-	justify-content: space-around;
+	justify-content: space-between;
 }
 
 .tool-row {
 	display: flex;
 	justify-content: space-around;
+	margin-bottom: 4px;
 }
 
 .color-window {

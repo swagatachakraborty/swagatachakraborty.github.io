@@ -69,36 +69,28 @@
 			</section>
 			
 			<section class="middle">
+				<section class="color-window">
+					<p class="descriptions">Manage your color</p>
+					<input id="color-window" type="color" value="#ffffff" />
+					<input type="submit" onclick="updateColorByValue('color-window')"/>
+				</section>
+
 				<section class="tool-bar">
-					<section class="tool-row"  display="inline">
+					<p class="descriptions">Tools</p>
+						<section class="tool-row">
 						<img id="pencil" src="/images/color-pencil.png" height="80px" onclick="selectTool(id)" />
 						<img id="brush" src="/images/paint.png" height="80px" onclick="selectTool(id)" />
 					</section>
 
 					<section class="tool-row">
+						<img id="rainbow" src='/images/rainbow.png' width="80px" height="80px" onclick="selectTool(id), chooseRandomColor()">
 						<img id="eraser"  src="/images/eraser.png" height="80px" onclick="selectTool(id), updateCurrentColor('')">
 					</section>
 				</section>
-
-				<section class="color-window">
-					Manage your color
-					<br><br>
-					<input id="color-window" type="color" value="#ffffff" />
-					<input type="submit" onclick="updateColorByValue('color-window')"/>
-				</section>
-
-				<section class="current-color">
-					Selected color
-					<br><br>
-					<section id="current-color"></section>
-				</section>
 				
-				<section class="random-color">
-					Pick random color
-					<br><br>
-					<button id="button" onclick="chooseRandomColor()">
-						<pre><h2>   Click   </h2></pre>
-					</button>
+				<section class="current-color">
+					<p class="descriptions">Selected color</p>
+					<section id="current-color"></section>
 				</section>
 			</section>
 
