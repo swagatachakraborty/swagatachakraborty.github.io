@@ -1,6 +1,9 @@
 <html>
 
 	<head>
+		<title>
+			Paint
+		</title>
 		<link rel="icon" href="/images/paintIcon.png">
 		<link rel="stylesheet" type="text/css" href="/style.css">
 		<script src="/main.js"> </script>
@@ -66,14 +69,15 @@
 			</section>
 			
 			<section class="middle">
-				<section class="tool">
-					<article>	
+				<section class="tool-bar">
+					<section class="tool-row"  display="inline">
 						<img id="pencil" src="/images/color-pencil.png" height="80px" onclick="selectTool(id)" />
-					</article>
-
-					<article>
 						<img id="brush" src="/images/paint.png" height="80px" onclick="selectTool(id)" />
-					</article>
+					</section>
+
+					<section class="tool-row">
+						<img id="eraser"  src="/images/eraser.png" height="80px" onclick="selectTool(id), updateCurrentColor('')">
+					</section>
 				</section>
 
 				<section class="color-window">

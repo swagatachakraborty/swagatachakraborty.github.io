@@ -1,7 +1,7 @@
 let random_color_clicked = true;
-let color;
 let drawing = false;
-let pencil, brush;
+let color, activeTool;
+let tools = [ 'brush', 'pencil', 'eraser' ];
 
 const random = (range) => Math.floor(Math.random() * range);
 
@@ -34,7 +34,7 @@ const createBoard = function () {
 	let max = 140;
 	let table = `<table
 	class=canvas
-	onclick='drawOrFill(event.target)'
+	onclick='startTool(event.target)'
 	onmousemove='draw(event.target)'>
 	<tbody>`;
 	for(let x = 0; x < max; x++){
@@ -60,9 +60,13 @@ const updateColorByValue = function (id) {
 	updateCurrentColor(selectedColor);
 };
 
-const drawOrFill = function (pixel) {
+const startTool = function (pixel) {
 	startOrStopDrawing();
-	if(brush)	fill(pixel);
+	switch(activeTool) {
+		case 'pencil': break;
+		case 'brush': fill(pixel); break;
+		case 'eraser': updateCurrentColor('');
+	}
 };
 
 const fill = function (pixel) {
@@ -93,11 +97,8 @@ const getAdjuscentPixels = function (id) {
 	return adjuscentIds.map(getElement);
 };
 
-const selectTool = function (activeTool) {
-	let deactiveTool ;
-	[pencil, brush, deactiveTool] = (activeTool == 'pencil') 
-		? [true, false, 'brush'] 
-		: [false, true, 'pencil'];
+const selectTool = function (selectedTool) {
+	tools.forEach( tool => getElement(tool).style.border = '0px');
+	activeTool = selectedTool;
 	getElement(activeTool).setAttribute('style', 'border: 2px solid red');
-	getElement(deactiveTool).style.border = '0px';
 };
